@@ -16,24 +16,23 @@ def circular_velocity():
     constant = input("Is radius constant? (y or n):  ")
     if constant == "n":
         response = input("list of numbers to plug in as r value of V = 2(pie)r/T:  " )
-        nums = response.split()
+        num_list1 = response.split()
         return "comming soon"
     else:
-
-
+        num = input("number to plug in as r value of V = 2(pie)r/T:  " )
         response2 = input("list of numbers to plug in as T value of V = 2(pie)r/T:  " )
-        num2 = response2.split()
+        num_list2 = response2.split()
 
 
-        for num in nums:
+        for p in num_list2:
             try:
                 radius = float(num)
-                period = float(num2)
+                period = float(p)
             except:
                 return"error"
             y = (2 * math.pi * radius) / period
             y_val = str(y)
-            print(f"R Input: {num} T Input: {num2} Output: {y_val}")
+            print(f"R Input: {num} T Input: {period} Output/Velocity: {y_val}")
 
 
 
@@ -44,7 +43,7 @@ while True:
     choices = """
     0: End
     1: Boxes To Meters
-    3: Periord and Radius to Circular Velocity
+    2: Periord and Radius to Circular Velocity
     """
     print(choices)
     try:
@@ -57,7 +56,7 @@ while True:
     elif usr_choice == 0:
         print("ending")
         break
-    elif usr_choice == 3:
+    elif usr_choice == 2:
         circular_velocity()
     else:
         print("invalid input")
