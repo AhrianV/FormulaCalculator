@@ -14,9 +14,12 @@ def boxes_to_meters():
         
 def circular_velocity():
     constant = input("Is radius constant? (y or n):  ")
-    if constant == "y":
+    if constant == "n":
         response = input("list of numbers to plug in as r value of V = 2(pie)r/T:  " )
         nums = response.split()
+        return "comming soon"
+    else:
+
 
         response2 = input("list of numbers to plug in as T value of V = 2(pie)r/T:  " )
         num2 = response2.split()
@@ -55,7 +58,7 @@ while True:
         print("ending")
         break
     elif usr_choice == 3:
-        print("hi")
+        circular_velocity()
     else:
         print("invalid input")
         continue
